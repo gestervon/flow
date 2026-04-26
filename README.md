@@ -1,4 +1,4 @@
-# 📊 FinTask
+# 📊 Flow
 
 A **Finance and Task Management System** built using the MERN Stack with Docker, JWT Authentication, Nginx reverse proxy, and modular routing.
 
@@ -49,7 +49,7 @@ A **Finance and Task Management System** built using the MERN Stack with Docker,
 ## 📁 Project Structure
 
 ```bash
-fintask/
+flow/
 │
 ├── client/              # React Frontend
 │   ├── src/
