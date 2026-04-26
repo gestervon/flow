@@ -56,8 +56,11 @@ fintask/
 │   │   ├── pages/
 │   │   ├── App.tsx
 │   │   └── main.tsx
+│   ├── dockerfile/
+│   ├── vite.config.ts/
 │
 ├── server/              # Express Backend
+│   ├── dockerfile
 │   ├── index.js
 │   ├── models/
 │   ├── routes/
@@ -67,8 +70,6 @@ fintask/
 │   └── default.conf
 │
 ├── docker-compose.yml
-├── Dockerfile (client/server)
 ├── .gitignore
-├── .env.example
 └── README.md
 ```
