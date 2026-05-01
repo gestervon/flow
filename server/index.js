@@ -15,7 +15,7 @@ mongoose
   .catch((err) => console.log("❌ Mongo error:", err));
 
 const User = mongoose.model("User", {
-  username: String,
+  email: String,
   password: String,
 });
 
@@ -27,15 +27,15 @@ app.post("/api/register", async (req, res) => {
 
 // login
 app.post("/api/login", async (req, res) => {
-  const { username, password } = req.body;
-  const user = await User.findOne({ username });
+  const { email, password } = req.body;
+  const user = await User.findOne({ email });
 
   if (!user) {
     return res.status(401).json({ message: "User not found" });
   }
 
   if (user.password !== password) {
-    return res.status(401).json({ message: "Invalid username or password" });
+    return res.status(401).json({ message: "Invalid email or password" });
   }
 
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
